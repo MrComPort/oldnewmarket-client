@@ -10,12 +10,12 @@ public class Api {
 	    if (host == null) host = "";
 	    host = host.trim();
 
-	    if (host.length() == 0) host = "94.156.115.120";
+	    if (host.length() == 0) host = "192.168.1.105";
 
-	    // убрать хвостовые слэши
+	    // ГіГЎГ°Г ГІГј ГµГўГ®Г±ГІГ®ГўГ»ГҐ Г±Г«ГЅГёГЁ
 	    while (host.endsWith("/")) host = host.substring(0, host.length() - 1);
 
-	    // если человек ввёл .../api — убираем, чтобы не было /api/api/...
+	    // ГҐГ±Г«ГЁ Г·ГҐГ«Г®ГўГҐГЄ ГўГўВёГ« .../api вЂ” ГіГЎГЁГ°Г ГҐГ¬, Г·ГІГ®ГЎГ» Г­ГҐ ГЎГ»Г«Г® /api/api/...
 	    if (host.endsWith("/api")) host = host.substring(0, host.length() - 4);
 	    while (host.endsWith("/")) host = host.substring(0, host.length() - 1);
 
